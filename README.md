@@ -6,6 +6,9 @@ This is a personal repository for storing the work I've done on various tasks in
 
 - [Password generator](/password_generator)
 
+- Searching Algorithms
+  - [Binary Search](/searching_algorithms/binary_search/)
+
 ## Getting Started
 
 To get started with this project, you'll need to have Rust installed on your machine. You can find instructions for installing Rust at https://www.rust-lang.org/tools/install.
