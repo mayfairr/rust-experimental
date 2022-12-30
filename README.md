@@ -4,7 +4,7 @@
 
 This is a personal repository for storing the work I've done on various tasks in Rust. Currently, I have a folder for a password generator.
 
-- [Password generator]('/password_generator')
+- [Password generator](/password_generator)
 
 ## Getting Started
 
