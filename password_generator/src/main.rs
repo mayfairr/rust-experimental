@@ -15,9 +15,14 @@ struct PasswordGenerator {
 }
 
 impl PasswordGenerator {
-    fn new(length: u8, include_uppercase: bool, include_numbers: bool, include_symbols: bool, debug_enabled: bool) -> String {
-        
-        let mut gen = PasswordGenerator  {
+    fn new(
+        length: u8,
+        include_uppercase: bool,
+        include_numbers: bool,
+        include_symbols: bool,
+        debug_enabled: bool,
+    ) -> String {
+        let mut gen = PasswordGenerator {
             length,
             include_uppercase,
             include_numbers,
@@ -35,20 +40,20 @@ impl PasswordGenerator {
     }
 
     fn generate_password(&mut self) {
-       for _ in 0..self.length {
-           let mut rng = rand::thread_rng();
-           let random_number = rng.gen_range(0..100);
+        for _ in 0..self.length {
+            let mut rng = rand::thread_rng();
+            let random_number = rng.gen_range(0..100);
 
-           if random_number < 25 && self.include_uppercase {
-               self.output_password.push(self.get_random_uppercase());
-           } else if random_number < 50 && self.include_numbers {
-               self.output_password.push(self.get_random_number());
-           } else if random_number < 75 && self.include_symbols {
-               self.output_password.push(self.get_random_symbol());
-           } else {
-               self.output_password.push(self.get_random_lowercase());
-           }
-       }
+            if random_number < 25 && self.include_uppercase {
+                self.output_password.push(self.get_random_uppercase());
+            } else if random_number < 50 && self.include_numbers {
+                self.output_password.push(self.get_random_number());
+            } else if random_number < 75 && self.include_symbols {
+                self.output_password.push(self.get_random_symbol());
+            } else {
+                self.output_password.push(self.get_random_lowercase());
+            }
+        }
     }
 
     fn get_random_lowercase(&self) -> char {
@@ -78,18 +83,16 @@ impl PasswordGenerator {
 
         return SYMBOLS[random_number] as char;
     }
-   
-    fn print_debug_message(&self){
+
+    fn print_debug_message(&self) {
         println!("Length: {}", self.length);
         println!("Include uppercase: {}", self.include_uppercase);
         println!("Include numbers: {}", self.include_numbers);
         println!("Include symbols: {}", self.include_symbols);
         println!("Output password: {}", self.output_password);
     }
-
 }
 
 fn main() {
- let password = PasswordGenerator::new(10, true, true, true, true); 
+    let password = PasswordGenerator::new(120, true, true, true, true);
 }
-

@@ -8,6 +8,8 @@ This is a personal repository for storing the work I've done on various tasks in
 
 - Searching Algorithms
   - [Binary Search](/searching_algorithms/binary_search/)
+- Web Development
+  - [Authentication Server](/web_development/authentication_server/)
 
 ## Getting Started
 
@@ -23,7 +25,7 @@ Once you have Rust installed, you can clone this repository and navigate to the 
 
 To install this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/rust-experimental.git`
+1. Clone the repository: `git clone https://github.com/mayfairr/rust-experimental.git`
 2. Navigate to the project directory: `cd rust-experimental`
 3. Navigate to the desired folder (e.g., `cd password_generator`)
 
